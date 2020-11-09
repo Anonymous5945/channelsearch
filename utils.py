@@ -31,14 +31,23 @@ class Media(Document):
 async def save_file(media):
     """Save file in database"""
 
-    file = Media(
+    if media.file_type == "voice":
+     file = Media(
+        file_id=media.file_id,
+        file_ref=media.file_ref,
+        file_size=media.file_size,
+        file_type=media.file_type,
+        mime_type=media.mime_type,
+     )
+    else:
+     file = Media(
         file_id=media.file_id,
         file_ref=media.file_ref,
         file_name=media.file_name,
         file_size=media.file_size,
         file_type=media.file_type,
         mime_type=media.mime_type,
-    )
+     )
 
     caption = media.caption
     if caption:
