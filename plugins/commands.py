@@ -86,7 +86,7 @@ async def delete(bot, message):
     if u == "voice":
      collection = db[COLLECTION_NAME]
      result = await collection.delete_one({
-        'file_id' : media.file_id
+        'file_id' : media.file_id,
         'file_size': media.file_size,
         'mime_type': media.mime_type,
         'caption': reply.caption
