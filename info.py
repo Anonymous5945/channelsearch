@@ -23,7 +23,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 START_MSG = """
-**Anneyong !!!**
+**Annyeong chingu 🙈🙈🙈**
 
 """
 
